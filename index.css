@@ -2,6 +2,9 @@
             margin: 0%;padding: 0%;
             font-family: sans-serif;
         }
+        body{
+            width: 100%;
+        }
         header{
             background-color: black;
             height: 90px;
@@ -55,7 +58,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background-image: url(./Images/banner.jpg);
+            background-image: url(./banner.jpg);
             background-repeat: no-repeat;
             background-size: cover;
         }
@@ -80,31 +83,29 @@
             border:1px solid red;
         }
         .categories{
-            height: 300px;
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 2.5em;
+            margin: 20px;
         }
         .category{
-            height: 250px;
-            width: 280px;
+            display: flex;
+            flex-direction: column;
             background-color: #DDDDDD;
             box-shadow: 0 0px 10px black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.5s ease;
+            height: 250px;
+            transition: transform 0.3s ease;
             border-radius: 10px;
         }
         .category img{
-            height: 250px;
-            width: 280px;
+            height:250px;
             border-radius: 10px;
         }
         .category:hover{
             transform: scale(1.1);
         }
+        
         .offers{
             height: 250px;
             background-color: rgb(255, 191, 0);
@@ -116,15 +117,14 @@
             border-radius: 10px;
         }
         .reviews{
-            height: 300px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 2em;
+            justify-content: center;
+            margin: 20px;
         }
         .rev{
-            height: 250px;
-            width: 300px;
+            max-height: 300px;
             background-color: #edecec;              
             display: flex;
             flex-direction: column;
